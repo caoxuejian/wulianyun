@@ -1,0 +1,69 @@
+package com.nxt.img;
+
+
+
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.ImageView;
+
+import com.nxt.img.util.ImageUtils;
+import com.nxt.wly.AbsMainActivity;
+import com.nxt.wly.R;
+
+public class ImageDelActivity extends AbsMainActivity {
+
+	private ImageView image_show;
+	private int position;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.item_img_del);
+		Intent intent = getIntent();
+		position = intent.getIntExtra("position", -1);
+		String path = intent.getStringExtra("path");
+		image_show = (ImageView) findViewById(R.id.image_show);
+		Bitmap bitmap = ImageUtils.getSmallBitmap(path);
+//		Bitmap bitmap = Utils.getImageFromLocal(path);
+		image_show.setImageBitmap(bitmap);
+
+		findViewById(R.id.group_photo_cancel).setOnClickListener(
+				new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						finish();
+
+					}
+				});
+		findViewById(R.id.group_photo_del).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				delete();
+			}
+		});
+	}
+
+	public void delete() {
+		Intent intent = new Intent();
+		intent.putExtra("position", position);
+		setResult(RESULT_OK, intent);
+		finish();
+	}
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			finish();
+		}
+		return false;
+	}
+
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/album_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_title"
+        layout="@layout/unit_top_title_bg" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="区域场景："
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+
+        <LinearLayout
+            android:id="@+id/ll_ivqucj"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/tv_qucj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="区域场景"
+                android:textSize="18dip" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right" >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/jiantou" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:background="#c2c2c2" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="操作内容："
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+
+        <LinearLayout
+            android:id="@+id/ll_cznr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/tv_cznr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作内容"
+                android:textSize="18dip" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right" >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/jiantou" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:background="#c2c2c2" />
+
+    <EditText
+        android:id="@+id/group_camera_photo_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/et_bule_bg"
+        android:hint="备注...."
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" />
+
+    <com.nxt.img.ui.NoScrollGridView
+        android:id="@+id/gridview_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_radius_grid_bg"
+        android:horizontalSpacing="5dip"
+        android:listSelector="@drawable/selector_pressed_gray"
+        android:numColumns="4"
+        android:padding="10dip"
+        android:verticalSpacing="5dip" />
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="#EBECEC" -->
+    <!-- android:layout_marginTop="10dp" -->
+    <!-- android:layout_marginLeft="10dp" -->
+    <!-- android:layout_marginRight="10dp" -->
+    <!-- android:gravity="center_vertical" > -->
+
+
+    <!-- 放置图片的layout -->
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/group_camera_photo_ll" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:padding="5dp" -->
+    <!-- android:orientation="horizontal"> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/group_camera_photo_add" -->
+    <!-- android:layout_width="60dp" -->
+    <!-- android:layout_height="60dp" -->
+    <!-- android:layout_margin="5dp" -->
+    <!-- android:background="@drawable/selector_addphoto_bg" -->
+    <!-- android:clickable="true" /> -->
+    <!-- </LinearLayout> -->
+
+</LinearLayout>

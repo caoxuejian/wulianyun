@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/frame_web_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linear_filechooser_btn_pool" >
+
+     
+
+        <com.nxt.wly.x5view.X5WebView
+            android:id="@+id/web_filechooser"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+        </com.nxt.wly.x5view.X5WebView>
+
+        <RelativeLayout
+            android:id="@+id/refreshPool"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/refreshText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:text="下拉刷新"
+                android:textColor="#fa1f34"
+                android:textSize="16dp" 
+                />
+
+           
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
